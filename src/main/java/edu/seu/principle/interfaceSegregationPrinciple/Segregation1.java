@@ -1,4 +1,4 @@
-package edu.seu.principle.InterfaceSegregationPrinciple;
+package edu.seu.principle.interfaceSegregationPrinciple;
 
 public class Segregation1 {
     public static void main(String[] args) {
