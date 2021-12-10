@@ -1,8 +1,6 @@
 package edu.seu.factory.simpleFactory.pizzaStore;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import edu.seu.factory.util.PizzaUtil;
 
 // 违反了ocp原则，新增一个pizza种类时，OrderPizza也需要修改代码
 // 创建Pizza的代码往往有多处，不易全部修改
@@ -17,7 +15,7 @@ public class OrderPizza {
         Pizza pizza = null;
         String orderType; // 订购Pizza的类型
         do {
-            orderType = getType();
+            orderType = PizzaUtil.getType();
             if (orderType.equals("greek")) {
                 pizza = new GreekPizza();
             } else if (orderType.equals("cheese")) {
@@ -26,23 +24,7 @@ public class OrderPizza {
                 break;
             }
             // 输出pizza制作的过程
-            pizza.prepare();
-            pizza.bake();
-            pizza.cut();
-            pizza.box();
+            PizzaUtil.makePizza(pizza);
         } while(true);
-    }
-
-    // 动态获取客户希望订购的pizza种类
-    public String getType() {
-        BufferedReader strIn = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("input pizza type");
-        String str = null;
-        try {
-            str = strIn.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return str;
     }
 }

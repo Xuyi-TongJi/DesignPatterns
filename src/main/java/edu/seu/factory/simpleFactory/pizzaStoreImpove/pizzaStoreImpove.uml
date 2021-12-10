@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>edu.seu.factory.simpleFactory.pizzaStoreImpove</OriginalElement>
+  <nodes>
+    <node x="22.916666666666657" y="496.0">edu.seu.factory.simpleFactory.pizzaStoreImpove.PizzaStore</node>
+    <node x="222.91666666666666" y="330.0">edu.seu.factory.simpleFactory.pizzaStoreImpove.OrderPizza</node>
+    <node x="32.91666666666666" y="343.5">edu.seu.factory.simpleFactory.pizzaStoreImpove.OrderPizza2</node>
+    <node x="375.0" y="0.0">edu.seu.factory.simpleFactory.pizzaStoreImpove.NewPizza</node>
+    <node x="181.0" y="0.0">edu.seu.factory.simpleFactory.pizzaStore.CheesePizza</node>
+    <node x="0.0" y="0.0">edu.seu.factory.simpleFactory.pizzaStore.GreekPizza</node>
+    <node x="146.0" y="139.0">edu.seu.factory.simpleFactory.pizzaStoreImpove.SimpleFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="edu.seu.factory.simpleFactory.pizzaStoreImpove.PizzaStore" target="edu.seu.factory.simpleFactory.pizzaStoreImpove.OrderPizza2" relationship="CREATE">
+      <point x="0.0" y="-44.5" />
+      <point x="0.0" y="44.5" />
+    </edge>
+    <edge source="edu.seu.factory.simpleFactory.pizzaStoreImpove.SimpleFactory" target="edu.seu.factory.simpleFactory.pizzaStoreImpove.NewPizza" relationship="CREATE">
+      <point x="0.0" y="-70.5" />
+      <point x="268.0" y="114.0" />
+      <point x="455.0" y="114.0" />
+      <point x="0.0" y="44.5" />
+    </edge>
+    <edge source="edu.seu.factory.simpleFactory.pizzaStoreImpove.OrderPizza2" target="edu.seu.factory.simpleFactory.pizzaStoreImpove.SimpleFactory" relationship="DEPENDENCY">
+      <point x="0.0" y="-44.5" />
+      <point x="117.91666666666666" y="310.0" />
+      <point x="263.0" y="310.0" />
+      <point x="263.0" y="300.0" />
+      <point x="207.0" y="300.0" />
+      <point x="-61.0" y="70.5" />
+    </edge>
+    <edge source="edu.seu.factory.simpleFactory.pizzaStoreImpove.OrderPizza" target="edu.seu.factory.simpleFactory.pizzaStoreImpove.SimpleFactory" relationship="DEPENDENCY">
+      <point x="-65.0" y="-58.0" />
+      <point x="287.91666666666663" y="310.0" />
+      <point x="263.0" y="310.0" />
+      <point x="263.0" y="300.0" />
+      <point x="207.0" y="300.0" />
+      <point x="-61.0" y="70.5" />
+    </edge>
+    <edge source="edu.seu.factory.simpleFactory.pizzaStoreImpove.OrderPizza" target="edu.seu.factory.simpleFactory.pizzaStoreImpove.SimpleFactory" relationship="TO_ONE">
+      <point x="65.0" y="-58.0" />
+      <point x="417.91666666666663" y="310.0" />
+      <point x="329.0" y="310.0" />
+      <point x="61.0" y="70.5" />
+    </edge>
+    <edge source="edu.seu.factory.simpleFactory.pizzaStoreImpove.SimpleFactory" target="edu.seu.factory.simpleFactory.pizzaStore.CheesePizza" relationship="CREATE">
+      <point x="0.0" y="-70.5" />
+      <point x="0.0" y="44.5" />
+    </edge>
+    <edge source="edu.seu.factory.simpleFactory.pizzaStoreImpove.SimpleFactory" target="edu.seu.factory.simpleFactory.pizzaStore.GreekPizza" relationship="CREATE">
+      <point x="0.0" y="-70.5" />
+      <point x="268.0" y="114.0" />
+      <point x="80.5" y="114.0" />
+      <point x="0.0" y="44.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.9765495867768595" showDependencies="true" x="255.31725378186815" y="495.4347826086956" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
