@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>edu.seu.adapter.springMVC</OriginalElement>
+  <nodes>
+    <node x="486.0" y="381.0">edu.seu.adapter.springMVC.AnnotationController</node>
+    <node x="586.0" y="138.0">edu.seu.adapter.springMVC.HttpHandlerAdapter</node>
+    <node x="287.5" y="298.0">edu.seu.adapter.springMVC.Controller</node>
+    <node x="310.0" y="138.0">edu.seu.adapter.springMVC.SimpleHandlerAdapter</node>
+    <node x="0.0" y="138.0">edu.seu.adapter.springMVC.AnnotationHandlerAdapter</node>
+    <node x="0.0" y="515.0">edu.seu.adapter.springMVC.DispatcherServlet</node>
+    <node x="258.0" y="381.0">edu.seu.adapter.springMVC.HttpController</node>
+    <node x="319.0" y="0.0">edu.seu.adapter.springMVC.HandlerAdapter</node>
+    <node x="0.0" y="381.0">edu.seu.adapter.springMVC.SimpleController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="edu.seu.adapter.springMVC.SimpleController" target="edu.seu.adapter.springMVC.Controller" relationship="REALIZATION">
+      <point x="0.0" y="-44.5" />
+      <point x="119.0" y="356.0" />
+      <point x="362.0" y="356.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="edu.seu.adapter.springMVC.AnnotationHandlerAdapter" target="edu.seu.adapter.springMVC.HandlerAdapter" relationship="REALIZATION">
+      <point x="0.0" y="-57.5" />
+      <point x="145.0" y="113.0" />
+      <point x="438.0" y="113.0" />
+      <point x="0.0" y="44.0" />
+    </edge>
+    <edge source="edu.seu.adapter.springMVC.HttpController" target="edu.seu.adapter.springMVC.Controller" relationship="REALIZATION">
+      <point x="0.0" y="-44.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="edu.seu.adapter.springMVC.HttpHandlerAdapter" target="edu.seu.adapter.springMVC.HandlerAdapter" relationship="REALIZATION">
+      <point x="0.0" y="-57.5" />
+      <point x="705.0" y="113.0" />
+      <point x="438.0" y="113.0" />
+      <point x="0.0" y="44.0" />
+    </edge>
+    <edge source="edu.seu.adapter.springMVC.AnnotationController" target="edu.seu.adapter.springMVC.Controller" relationship="REALIZATION">
+      <point x="0.0" y="-44.5" />
+      <point x="619.0" y="356.0" />
+      <point x="362.0" y="356.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="edu.seu.adapter.springMVC.SimpleHandlerAdapter" target="edu.seu.adapter.springMVC.HandlerAdapter" relationship="REALIZATION">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="44.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6395864106351551" showDependencies="true" x="412.0" y="328.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
