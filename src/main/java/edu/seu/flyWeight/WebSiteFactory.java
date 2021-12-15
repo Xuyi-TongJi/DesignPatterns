@@ -12,7 +12,7 @@ public class WebSiteFactory {
     // 池：体现了享元的思想（线程池，连接池）
     private HashMap<String, Website> pool = new HashMap<>();
 
-    // 根据网站的额理性，返回一个网站，如果没有就创建一个网站，并放入池中
+    // 根据网站的种类，返回一个网站，如果没有就创建一个网站，并放入池中
     public Website getWebsiteCategory(String type) {
         if (!pool.containsKey(type)) {
             pool.put(type, new ConcreteWebsite(type));

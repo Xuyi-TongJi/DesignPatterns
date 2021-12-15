@@ -14,7 +14,6 @@ public class TheaterFacade {
     private final Screen screen;
 
     // Constructor
-
     public TheaterFacade() {
         this.dvdPlayer = DVDPlayer.getInstance();
         this.popcorn = Popcorn.getInstance();
