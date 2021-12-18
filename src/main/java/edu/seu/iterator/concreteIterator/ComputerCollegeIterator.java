@@ -23,12 +23,8 @@ public class ComputerCollegeIterator implements Iterator<Department> {
      */
     @Override
     public boolean hasNext() {
-        if (position >= departments.length ||
-                departments[position] == null) {
-            return false;
-        } else {
-            return true;
-        }
+        return position < departments.length &&
+                departments[position] != null;
     }
 
     /**
