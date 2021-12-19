@@ -33,10 +33,6 @@ public class Participant implements Context {
         return currentState;
     }
 
-    public void doEnd() {
-        ((DispenseOutState)(this.getCurrentState())).dispenseOut();
-    }
-
     private void setState(String stateName) {
         this.currentState = statesMap.get(stateName);
     }
@@ -60,11 +56,11 @@ public class Participant implements Context {
         public boolean deduceMoney() {
             synchronized (this.participant.getActivity()) {
                 if (participant.getCount() <= 0) {
-                    System.out.println("奖品已经领完");
+                    System.out.println(Thread.currentThread().getName() + "奖品已经领完");
                     super.participant.setState("dispenseOutState");
                     return false;
                 } else {
-                    System.out.println("已经扣除50积分，可以开始抽奖");
+                    System.out.println(Thread.currentThread().getName() + "已经扣除50积分，可以开始抽奖");
                     super.participant.setState("canRaffleState");
                     return true;
                 }
@@ -85,11 +81,11 @@ public class Participant implements Context {
                 int num = new Random().nextInt(2);
                 if (num == 0) {
                     // 抽中
-                    System.out.println("恭喜中奖，请领奖");
+                    System.out.println(Thread.currentThread().getName() + "恭喜中奖，请领奖");
                     this.participant.setState("dispenseState");
                 } else {
                     // 未抽中
-                    System.out.println("很遗憾未中奖，可再试一次");
+                    System.out.println(Thread.currentThread().getName() + "很遗憾未中奖，可再试一次");
                     this.participant.setState("noRaffleState");
                     return false;
                 }
@@ -108,12 +104,13 @@ public class Participant implements Context {
         public boolean dispensePrize() {
             synchronized (super.participant.getActivity()) {
                 if (super.participant.getCount() <= 0) {
-                    System.out.println("抱歉，奖品已被领完");
+                    System.out.println(Thread.currentThread().getName() + "抱歉，奖品已被领完");
                     super.participant.setState("dispenseOutState");
                     return false;
                 }
                 System.out.println(Thread.currentThread().getName() + "开始领取奖品");
-                System.out.println("奖品已经领取，剩余" + super.participant.getCount() + "件");
+                System.out.println(Thread.currentThread().getName() +
+                        "奖品已经领取，剩余" + super.participant.getCount() + "件");
                 if (super.participant.getActivity().getPrize()) {
                     super.participant.setState("dispenseOutState");
                     return false;
@@ -131,10 +128,6 @@ public class Participant implements Context {
 
         public DispenseOutState(Participant participant) {
             super(participant);
-        }
-
-        public void dispenseOut() {
-            System.out.println("感谢参与本次活动！");
         }
 
         @Override

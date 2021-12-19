@@ -1,6 +1,5 @@
 package edu.seu.state.concurrent.state;
 
-import edu.seu.state.concurrent.state.State;
 import edu.seu.state.concurrent.context.Participant;
 import edu.seu.state.concurrent.exception.OperationException;
 

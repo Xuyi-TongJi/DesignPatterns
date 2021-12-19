@@ -3,12 +3,9 @@ package edu.seu.state.concurrent;
 import edu.seu.state.concurrent.context.Activity;
 import edu.seu.state.concurrent.context.Participant;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 public class Client {
     public static void main(String[] args) {
-        Activity activity = new Activity(5);
+        Activity activity = new Activity(20);
         Runnable r1 = new Runnable() {
             public void run() {
                 Participant participant = new Participant(activity);
@@ -27,26 +24,34 @@ public class Client {
                 doActivity(participant, activity);
             }
         };
-        new Thread(r1, "t1").start();
-        new Thread(r2, "t2").start();
-        new Thread(r3, "t3").start();
+        Thread t1 = new Thread(r1, "t1");
+        Thread t2 = new Thread(r2, "t2");
+        Thread t3 = new Thread(r3, "t3");
+        t1.start();
+        t2.start();
+        t3.start();
+        // Main Thread wait t1, t2, t3
+        try {
+            t1.join();
+            t2.join();
+            t3.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(activity.getCount());
     }
 
     public static void doActivity(Participant participant, Activity activity) {
         while (true) {
-            System.out.println("-----------------");
             if (participant.getCurrentState().deduceMoney()) {
                 if (participant.getCurrentState().raffle()) {
                     if (!participant.getCurrentState().dispensePrize())
                         break;
-                } else {
-                    continue;
                 }
             } else {
                 break;
             }
-            System.out.println("-----------------");
         }
-        System.out.println(participant.getCurrentState());
+        System.out.println(participant.getCurrentState()); // DispenseOut
     }
 }
