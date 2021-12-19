@@ -46,7 +46,7 @@ public class Participant implements Context {
     }
 
 
-    static class NoRaffleState extends AbstractState{
+    private static class NoRaffleState extends AbstractState{
 
         public NoRaffleState(Participant participant) {
             super(participant);
@@ -68,7 +68,7 @@ public class Participant implements Context {
         }
     }
 
-    static class CanRaffleState extends AbstractState {
+    private static class CanRaffleState extends AbstractState {
 
         public CanRaffleState(Participant participant) {
             super(participant);
@@ -94,7 +94,7 @@ public class Participant implements Context {
         }
     }
 
-    static class DispenseState extends AbstractState{
+    private static class DispenseState extends AbstractState{
 
         public DispenseState(Participant participant) {
             super(participant);
@@ -121,10 +121,11 @@ public class Participant implements Context {
             }
         }
     }
+
     /**
      * 终止状态
      */
-    static class DispenseOutState extends AbstractState{
+    private static class DispenseOutState extends AbstractState{
 
         public DispenseOutState(Participant participant) {
             super(participant);

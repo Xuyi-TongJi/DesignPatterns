@@ -51,6 +51,12 @@ public class Client {
             } else {
                 break;
             }
+            // 增加context switch的可能性
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         System.out.println(participant.getCurrentState()); // DispenseOut
     }
