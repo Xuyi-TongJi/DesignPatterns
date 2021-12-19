@@ -1,4 +1,4 @@
-package edu.seu.flyWeight;
+package edu.seu.flyweight;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,7 +1,7 @@
-package edu.seu.flyWeight.concrete;
+package edu.seu.flyweight.concrete;
 
-import edu.seu.flyWeight.User;
-import edu.seu.flyWeight.Website;
+import edu.seu.flyweight.User;
+import edu.seu.flyweight.Website;
 
 public class ConcreteWebsite extends Website {
 

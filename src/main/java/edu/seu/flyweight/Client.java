@@ -1,4 +1,4 @@
-package edu.seu.flyWeight;
+package edu.seu.flyweight;
 
 public class Client {
     public static void main(String[] args) {

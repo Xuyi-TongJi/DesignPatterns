@@ -1,6 +1,6 @@
-package edu.seu.flyWeight;
+package edu.seu.flyweight;
 
-import edu.seu.flyWeight.concrete.ConcreteWebsite;
+import edu.seu.flyweight.concrete.ConcreteWebsite;
 
 import java.util.HashMap;
 

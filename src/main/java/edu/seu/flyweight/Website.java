@@ -1,4 +1,4 @@
-package edu.seu.flyWeight;
+package edu.seu.flyweight;
 
 // flyweight
 public abstract class Website {
