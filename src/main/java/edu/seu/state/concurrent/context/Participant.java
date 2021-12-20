@@ -45,7 +45,6 @@ public class Participant implements Context {
         return this.activity.getCount();
     }
 
-
     private static class NoRaffleState extends AbstractState{
 
         public NoRaffleState(Participant participant) {
@@ -54,7 +53,7 @@ public class Participant implements Context {
 
         @Override
         public boolean deduceMoney() {
-            synchronized (this.participant.getActivity()) {
+            synchronized (super.participant.getActivity()) {
                 if (participant.getCount() <= 0) {
                     System.out.println(Thread.currentThread().getName() + "奖品已经领完");
                     super.participant.setState("dispenseOutState");
@@ -76,7 +75,7 @@ public class Participant implements Context {
 
         @Override
         public boolean raffle() {
-            synchronized (this.participant.getActivity()) {
+            synchronized (super.participant.getActivity()) {
                 System.out.println(Thread.currentThread().getName() + "正在开始抽奖");
                 int num = new Random().nextInt(2);
                 if (num == 0) {

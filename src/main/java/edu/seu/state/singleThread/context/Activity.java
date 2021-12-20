@@ -23,7 +23,6 @@ public class Activity implements Context {
         this.currentState = activityStates.get("noRaffleState");
     }
 
-    // 读操作可以并发
     @Override
     public State getCurrentState() {
         return currentState;
